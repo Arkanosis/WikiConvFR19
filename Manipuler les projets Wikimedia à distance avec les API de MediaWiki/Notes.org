@@ -1,0 +1,18 @@
+* Infos
+** Titre : Manipuler les projets Wikimedia à distance avec les API de MediaWiki
+** Date et heure : dimanche 8 septembre, 10 h 00
+** Durée : 1 heure
+** Lieu : salle H2.214 (56 personnes)
+** Description : [[https://meta.wikimedia.org/wiki/WikiConvention_francophone/2019/Programme/Manipuler les projets Wikimedia à distance avec les API de MediaWiki][meta]]
+** Notes : [[https://notes.wikimedia.fr/public_pad/WikiConvFR19_API][pad]]
+** Suite : Atelier SPARQL
+* Description
+La plupart des personnes utilisant et contribuant aux projets Wikimedia le font
+via les sites web et les applications mobiles de la fondation Wikimedia. Il est
+cependant possible d'interagir avec des interfaces alternatives, des outils
+facilitant ou automatisant certaines interactions (comme les robots)… Cet
+atelier vise à découvrir les possibilités qu'offrent les différentes API
+(interfaces de programmation) du logiciel MediaWiki et à en exploiter certaines
+pour manipuler les projets Wikimedia « à distance » (suivre les modifications
+apportées aux articles, modifier des pages…).
+* TODO Plan

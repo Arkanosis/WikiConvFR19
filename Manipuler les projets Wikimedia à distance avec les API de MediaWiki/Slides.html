@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=no">
+
+		<title>Manipuler les projets Wikimedia à distance avec les API de MediaWiki</title>
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style type="text/css">
+			section {
+				height: 100%;
+				width: 100%;
+			}
+			.caption {
+				position: absolute;
+				bottom: 1em;
+				right: 1em;
+			}
+			.reveal .slides img {
+				border: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 style="margin-top: 10%; font-size:120%">Manipuler les projets Wikimedia à distance<br>avec les API de MediaWiki</h2>
+					<p>
+						<a href="https://commons.wikimedia.org/wiki/File:FIXME"><img src="images/FIXME" style="height: 250px;"></a>
+						<br>
+						<small style="font-size: 40%">© FIXME, FIXME</small>
+					</p>
+					<p>
+						<a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — WikiConvention francophone 2019
+					</p>
+				</section>
+				<section>
+					<h2>API ?</h2>
+					<ul>
+						<li class="fragment">FIXME</li>
+					</ul>
+					<p>
+						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
+					</p>
+				</section>
+				<section>
+					<h2>~~~~</h2>
+					<p>
+						<a href="https://commons.wikimedia.org/wiki/FIXME"><img src="images/FIXME" style="width: 500.0px;"></a>
+						<br>
+						<small style="font-size: 40%">© FIXME, FIXME</small>
+					</p>
+					<ul>
+						<li><a href="https://fr.wikipedia.org/wiki/User_talk:Arkanosis">frwp.org/User:Arkanosis</a></li>
+						<li><a href="mailto:jroquet@arkanosis.net">jroquet@arkanosis.net</a></li>
+						<li><a href="#">@Arkanosis</a> <small>freenode, GitHub, <del>Twitter</del> Mastodon…</small></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				width: '100%',
+				height: '100%',
+
+				history: true,
+
+				keyboard: {
+					'0': 'togglePause',
+					'9': 'toggleOverview',
+					'38': 'navigateLeft',
+					'40': 'navigateRight'
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js' },
+					{ src: '../reveal.js/plugin/markdown/marked.js' },
+					{ src: '../reveal.js/plugin/markdown/markdown.js' },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

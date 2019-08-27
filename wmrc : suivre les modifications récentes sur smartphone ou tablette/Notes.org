@@ -1,0 +1,22 @@
+* Infos
+** Titre : wmrc : suivre les modifications récentes sur smartphone ou tablette
+** Date et heure : samedi 7 septembre, 18 h 20
+** Durée : 5 min
+** Lieu : salle H2.214 (56 personnes)
+** Description : [[https://meta.wikimedia.org/wiki/WikiConvention_francophone/2019/Programme/wmrc : suivre les modifications récentes sur smartphone ou tablette][meta]]
+** Notes : [[https://notes.wikimedia.fr/public_pad/WikiConvFR19_éclair-3][pad]]
+** Suite : Gouvernance et prise de décision au sein d'une communauté Wiki
+* Description
+wmrc est un outil de suivi en temps réel des modifications récentes, permettant
+la détection rapide des maladresses, des erreurs, des modifications
+indésirables et des vandalismes. Il est conçu pour un usage nomade sur
+smartphone ou tablette, avec une connexion internet mobile. Cette présentation
+éclair est l'occasion de faire le point sur l'avancement du projet depuis sa
+première présentation lors de la WikiConvention 2018 à Grenoble.
+* TODO Préparation
+** Partage d'écran avec [[https://github.com/Genymobile/scrcpy][scrcpy]]
+** Affichage des doigts avec le mode développeur d'Android
+⇒ Afficher élément sélectionné
+* TODO Plan
+** Présentation (30 ″)
+** Démo (4′30″)
