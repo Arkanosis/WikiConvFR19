@@ -28,13 +28,26 @@ Moyen de communication entre un projet Wikimedia et un programme.
  - L'app mobile est en réalité basée sur l'API
  - Le site aussi (en partie)
  - Ce qui ne peut pas utiliser l'API : modèles, Lua… (vérifier)
-** Présentation de Spécial:API
+ - https://tools.wmflabs.org/apps-gallery/
+** Multiples APIs
+ - index.php
+ - api.php
+ - https://en.wikipedia.org/api/rest_v1/ ; [[https://en.wiktionary.org/api/rest_v1/#/Page%20content/get_page_definition__term_][exemple wiktionnaire]]
+ - [[https://www.mediawiki.org/wiki/Parsoid/API][parsoid]], [[https://www.mediawiki.org/wiki/Web_APIs_hub][etc.]]
+ - https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams
+ - https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews
+ - WDQS (rester à la présentation suivante !)
+** Présentation de Spécial:Apihelp
+** Présentation de Spécial:Apisandbox
 ** Manipulation via le navigateur
  - Parce que déjà authentifié
  - ⇒ c'est ce qui se passe avec les scripts / gadgets
+ - Choix du format de sortie
 ** Manipulation via JavaScript
  - Mini script / gadget utilisant l'API
-** Manipulation via httpie
+ - En utilisant JSON
+ - GET vs POST
+** Manipulation via httpie / jq
  - C'est vraiment à distance
  - Requêtes de lectures simples
  - Affichage de ce qui transite
@@ -47,3 +60,8 @@ Moyen de communication entre un projet Wikimedia et un programme.
  - Pywikibot
 ** Manipulation via une appli mobile
  - Kotlin (wmrc)
+** Complément d'information
+ - https://www.mediawiki.org/wiki/API:Main_page/fr
+ - Special:Apihelp
+ - Special:ApiSandbox
+ - [[https://lists.wikimedia.org/mailman/listinfo/mediawiki-api][mediawiki-api]]
