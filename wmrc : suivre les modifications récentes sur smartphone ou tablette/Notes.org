@@ -1,6 +1,6 @@
 * Infos
 ** Titre : wmrc : suivre les modifications récentes sur smartphone ou tablette
-** Date et heure : samedi 7 septembre, 18 h 20
+** Date et heure : samedi 7 septembre, 17 h 40
 ** Durée : 5 min
 ** Lieu : salle H2.214 (56 personnes)
 ** Description : [[https://meta.wikimedia.org/wiki/WikiConvention_francophone/2019/Programme/wmrc : suivre les modifications récentes sur smartphone ou tablette][meta]]
