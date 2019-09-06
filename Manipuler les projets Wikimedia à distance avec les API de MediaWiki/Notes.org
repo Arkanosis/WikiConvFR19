@@ -15,8 +15,8 @@ atelier vise à découvrir les possibilités qu'offrent les différentes API
 (interfaces de programmation) du logiciel MediaWiki et à en exploiter certaines
 pour manipuler les projets Wikimedia « à distance » (suivre les modifications
 apportées aux articles, modifier des pages…).
-* TODO Plan [5/15]
-** Manipulations « classiques »
+* TODO Plan [7/16]
+** DONE Manipulations « classiques »
  - Site web
  - App mobile
 ** DONE Définition API
@@ -69,7 +69,7 @@ Moyen de communication entre un projet Wikimedia et un programme.
 *** Pywikibot
 ** TODO Manipulation via une appli mobile (?)
  - Kotlin (wmrc)
-** TODO Ce qui ne peut pas utiliser l'API : modèles, Lua… (vérifier)
+** DONE Ce qui ne peut pas utiliser l'API : modèles, Lua… (vérifier)
 ** TODO Résumé, plusieurs façons de manipuler
 *** Dans le navigateur (typiquement en JavaScript)
 **** Avantages
