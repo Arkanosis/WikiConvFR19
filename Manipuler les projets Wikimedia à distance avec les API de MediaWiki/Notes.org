@@ -45,6 +45,8 @@ Moyen de communication entre un projet Wikimedia et un programme.
  - ⇒ c'est ce qui se passe avec les scripts / gadgets
  - Choix du format de sortie
 ** TODO Manipulation via JavaScript
+ - Go https://test2.wikipedia.org
+ - Go
  - Mini script / gadget utilisant l'API
 #+BEGIN_SRC js
 $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
@@ -123,3 +125,9 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
  - Special:Apihelp
  - Special:ApiSandbox
  - [[https://lists.wikimedia.org/mailman/listinfo/mediawiki-api][mediawiki-api]]
+* TODO Scénarios
+ - [X] Bienvenutage de nouveau en JS
+ - [ ] Autorevert + avertissement en JS
+ - [ ] Stats sur un utilisateur en curl
+* TODO Timing
+ - Faire seulement un exemple de chaque (le temps d'installer curl, Python…) et revenir en arrière s'il reste du temps à la fin
