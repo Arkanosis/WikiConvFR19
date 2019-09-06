@@ -44,38 +44,10 @@ Moyen de communication entre un projet Wikimedia et un programme.
  - ⇒ c'est ce qui se passe avec les scripts / gadgets
  - Choix du format de sortie
 ** TODO Manipulation via JavaScript
+ - Go sandbox
  - Go https://test2.wikipedia.org
- - Go
+ - Go common.js
  - Mini script / gadget utilisant l'API
-#+BEGIN_SRC js
-$( function() { // TODO uniquement sur Spécial:Nouvelles_pages
-    $( '<a>bienvenuter</a>' ).click( function() {
-	var api = new mw.Api();
-	api.get(
-	    {
-		"action": "query",
-		"format": "json",
-		"meta": "tokens"
-	    }
-	).done( function ( data ) {
-	    api.post(
-		{
-		    "action": "edit",
-		    "format": "json",
-		    "title": "User:Arktest/bienvenue", // TODO PdD de l'utilisateur
-		    "section": "new",
-		    "sectiontitle": "Bienvenue sur Wikipédia !",
-		    "text": "Hello !~~~~", // TODO message de bienvenue
-		    "summary": "Bienvenue !",
-		    "token": data.query.tokens.csrftoken
-		}
-	    ).done( function ( data ) {
-		console.log( 'CEFE!' ); // TODO feedback
-	    } );
-	} );
-    } ).insertAfter( $( '.mw-usertoollinks-contribs' ) ).before( ' | ' );
-} );
-#+END_SRC
  - En utilisant JSON
  - GET vs POST
  - Montrer la console réseau de Firefox
@@ -89,8 +61,12 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
  - Requête de modification authentifiée
  - Suivi des modifications
 ** TODO Manipulation via un langage de scripts
- - Python (mini-bot)
- - Pywikibot
+*** Python (mini-bot)
+ - python -m venv mon_venv
+ - source ./mon_venv/bin/activate / mon_venv\Scripts\activate.bat
+ - python -m pip install requests
+ - python mon_script.py
+*** Pywikibot
 ** TODO Manipulation via une appli mobile (?)
  - Kotlin (wmrc)
 ** TODO Ce qui ne peut pas utiliser l'API : modèles, Lua… (vérifier)
