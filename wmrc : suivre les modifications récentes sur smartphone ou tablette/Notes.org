@@ -20,17 +20,26 @@ première présentation lors de la WikiConvention 2018 à Grenoble.
 * TODO Setup
  - xautolock -disable
  - xrfhd
+ - WiFi ULB sur PC et smartphone
  - LiveRC sans bots
  - scrcpy
 * TODO Plan
  - Introduction au projet
+   - LiveRC (demo)
+   - Suivi dans les transports, en attendant un rendez-vous…
+   - Gain de temps même juste en approuvant, pour les autres sous LiveRC
  - Démo
  - Revert
+ - Améliorations
+   - Filtres wiki, contributeurs, etc.
+   - Avertissements
+   - Thème sombre
  - Installation via F-Droid depuis le site
  - F-Droid permet les mises à jour
  - Logout + login, mot de passe de bot
  - Points d'attention
    - Surveiller sa PdD
    - Messages d'avertissement
+   - Approuvez, ne revertez pas
    - GitHub issues
  - Appel à participation
