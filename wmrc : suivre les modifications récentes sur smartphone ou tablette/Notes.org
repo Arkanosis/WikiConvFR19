@@ -13,10 +13,24 @@ indésirables et des vandalismes. Il est conçu pour un usage nomade sur
 smartphone ou tablette, avec une connexion internet mobile. Cette présentation
 éclair est l'occasion de faire le point sur l'avancement du projet depuis sa
 première présentation lors de la WikiConvention 2018 à Grenoble.
-* TODO Préparation
+* DONE Préparation
 ** Partage d'écran avec [[https://github.com/Genymobile/scrcpy][scrcpy]]
 ** Affichage des doigts avec le mode développeur d'Android
 ⇒ Afficher élément sélectionné
+* TODO Setup
+ - xautolock -disable
+ - xrfhd
+ - LiveRC sans bots
+ - scrcpy
 * TODO Plan
-** Présentation (30 ″)
-** Démo (4′30″)
+ - Introduction au projet
+ - Démo
+ - Revert
+ - Installation via F-Droid depuis le site
+ - F-Droid permet les mises à jour
+ - Logout + login, mot de passe de bot
+ - Points d'attention
+   - Surveiller sa PdD
+   - Messages d'avertissement
+   - GitHub issues
+ - Appel à participation
