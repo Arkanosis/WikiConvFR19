@@ -33,6 +33,9 @@
 			.reveal .slides img {
 				border: 0;
 			}
+			.reveal pre {
+				width: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -65,7 +68,7 @@
 				<section data-background="images/Bruxelles-wiktionnaire.png"></section>
 				<section data-background="images/Bruxelles-commons.png"></section>
 				<section data-background="images/Bruxelles-wikidata.png"></section>
-				<section>
+				<section data-transition="none">
 					<h2>MediaWiki et les projets Wikimedia</h2>
 					<p>
 						<a href="https://commons.wikimedia.org/wiki/File:Wikimedia_logo_family_complete-2013.svg"><img src="images/Wikimedia_logo_family_complete-2013.svg.png" style="height: 300px; background-color: white;"></a>
@@ -88,7 +91,6 @@
 				</section>
 				<section>
 					<h2>API ?</h2>
-					<!-- TODO définition API et intérét ; graphe d'interaction sans login --->
 					<p>
 						<a href="https://commons.wikimedia.org/wiki/File:Cross_section_of_Api_Rose_(Creuse),_National_Fruit_Collection_(acc._1948-223).jpg"><img src="images/Cross_section_of_Api_Rose_(Creuse),_National_Fruit_Collection_(acc._1948-223).jpg" style="height: 300px;"></a>
 						<br>
@@ -103,23 +105,8 @@
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
 				</section>
-				<!-- TODO graphe d'interaction avec login <section>
-					<h2>API ?</h2>
-					<p>
-						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
-						<br>
-						<small style="font-size: 40%">© FIXME, FIXME</small>
-					</p>
-					<ul>
-						<li class="fragment">FIXME</li>
-					</ul>
-					<p>
-						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
-					</p>
-				</section>-->
 				<section>
 					<h2>Les projets Wikimedia sur mobile</h2>
-					<!-- TODO tendance grandissante à passer par le mobile ; graphe statistique -->
 					<p>
 						<a href="https://play.google.com/store/apps/details?id=org.wikipedia&hl=fr"><img src="images/Wikipedia-mobile.png" style="height: 600px;"></a>
 						<br>
@@ -194,7 +181,6 @@
 				</section>
 				<section>
 					<h2>Différentes API</h2>
-					<!-- TODO cf. notes-->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -223,9 +209,8 @@
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
 				</section>
-				<section>
+				<section data-transition="none">
 					<h2>Différentes API</h2>
-					<!-- TODO cf. notes-->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -255,9 +240,8 @@
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
 				</section>
-				<section>
+				<section data-transition="none">
 					<h2>Différentes API</h2>
-					<!-- TODO cf. notes-->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -364,50 +348,21 @@
 					</p>
 				</section>
 				<section>
-					<h2>API</h2>
-						<pre><code style="height: 800px; max-height:800px;">
-$( function() { // TODO uniquement sur Spécial:Nouvelles_pages
-    $( '<a>bienvenuter</a>' ).click( function() {
-	var api = new mw.Api();
-	api.get(
-	    {
-		"action": "query",
-		"format": "json",
-		"meta": "tokens"
-	    }
-	).done( function ( data ) {
-	    api.post(
-		{
-		    "action": "edit",
-		    "format": "json",
-		    "title": "User:Arktest/bienvenue", // TODO PdD de l'utilisateur
-		    "section": "new",
-		    "sectiontitle": "Bienvenue sur Wikipédia !",
-		    "text": "Hello !~~~~", // TODO message de bienvenue
-		    "summary": "Bienvenue !",
-		    "token": data.query.tokens.csrftoken
-		}
-	    ).done( function ( data ) {
-		console.log( 'CEFE!' ); // TODO feedback
-	    } );
-	} );
-    } ).insertAfter( $( '.mw-usertoollinks-contribs' ) ).before( ' | ' );
-} );
-						</code></pre>
-					<p>
-						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2017</small>
-					</p>
-				</section>
-				<section>
 					<h2>Hors du navigateur</h2>
 					<!-- TODO curl / wget / httpie / jq ; installation sous Windows -->
-					<p>
-						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
-						<br>
-						<small style="font-size: 40%">© FIXME, FIXME</small>
-					</p>
+					<table>
+						<tr>
+							<td style="border: 0;"><a href="https://commons.wikimedia.org/wiki/File:Curl-logo.svg"><img src="images/Curl-logo.svg.png" style="height: 200px;"></a></td>
+							<td style="border: 0;"><a href="https://stedolan.github.io/jq/"><img src="images/jq.png" style="height: 200px;"></a></td>
+						</tr>
+						<tr>
+							<td style="border: 0;"><small style="font-size: 40%">© Soft Dreams, CC-BY-SA 4.0</small></td>
+							<td style="border: 0;"><small style="font-size: 40%">© Stephen Dolan, CC-BY 3.0</small></td>
+						</tr>
+					</table>
 					<ul>
-						<li class="fragment">FIXME</li>
+						<li class="fragment">Installer CURL : <a href="https://curl.haxx.se/download.html">https://curl.haxx.se/download.html</a></li>
+						<li class="fragment">Installer jq : <a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></li>
 					</ul>
 					<p>
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
@@ -437,12 +392,31 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 					</p>
 					<ul>
 						<li class="fragment">Installer python<ul>
-							<li class="fragment">Linux : <code>python3 --version</code></li>
-							<li class="fragment">Windows :<ul>
+							<li class="fragment">Linux / macOS<pre><code>python3 --version</code></pre></li>
+							<li class="fragment">Windows<ul>
 								<li><a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></li>
 								<li class="fragment">Ajouter python au %PATH%</li>
 							</ul></li>
 						</ul></li>
+					</ul>
+					<p>
+						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
+					</p>
+				</section>
+				<section>
+					<h2>Programmation : exemple de Python</h2>
+					<p>
+						<a href="https://commons.wikimedia.org/wiki/File:Python.svg"><img src="images/Python.svg.png" style="height: 200px;"></a>
+						<br>
+						<small style="font-size: 40%">© Tango! Project, GPLv2+</small>
+					</p>
+					<ul>
+						<li class="fragment">Créer un venv<pre><code>python -m venv mon_venv</code></pre></li>
+						<li class="fragment">Activer le venv<ul>
+							<li class="fragment"><pre><code>source ./mon_venv/bin/activate # Linux / macOS</code></pre></li>
+							<li class="fragment"><pre><code>mon_venv\Scripts\activate.bat # Windows</code></pre></li>
+						</ul></li>
+						<li class="fragment">Installer <code>requests</code><pre><code>python -m pip install requests</code></pre></li>
 					</ul>
 					<p>
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
@@ -456,21 +430,14 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 						<small style="font-size: 40%">© Tango! Project, GPLv2+</small>
 					</p>
 					<ul>
-						<li class="fragment">Créer un venv : <code>python -m venv mon_venv</code></li>
-						<li class="fragment">Activer le venv :<ul>
-							<li class="fragment">Linux : <code>source ./mon_venv/bin/activate</code></li>
-							<li class="fragment">Windows : <code>mon_venv\Scripts\activate.bat</code></li>
-						</ul></li>
-						<li class="fragment">Installer <code>requests</code> : <code>python -m pip install requests</code></li>
-						<li class="fragment">Exécuter un script : <code>python mon_script.py</code></li>
+						<li class="fragment">Exécuter un script<pre><code>python mon_script.py</code></pre></li>
 					</ul>
 					<p>
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
 				</section>
-				<section>
+<!--				<section>
 					<h2>Pywikibot</h2>
-					<!-- TODO -->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -482,10 +449,9 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 					<p>
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
-				</section>
-				<section>
+				</section>-->
+<!--				<section>
 					<h2>Programmation : exemple de Kotlin</h2>
-					<!-- TODO -->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -497,14 +463,13 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 					<p>
 						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
 					</p>
-				</section>
+				</section>-->
 				<section>
 					<h2>Pour résumer : dans le navigateur</h2>
-					<!-- TODO -->
 					<p>
-						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
+						<a href="https://www.paulirish.com/2010/high-res-browser-icons/"><img src="images/browsers.png" style="height: 200px;"></a>
 						<br>
-						<small style="font-size: 40%">© FIXME, FIXME</small>
+						<small style="font-size: 40%">© Paul Irish, Google, Microsoft, Mozilla, Opera, Apple</small>
 					</p>
 					<ul>
 						<li>Avantages<ul>
@@ -512,8 +477,9 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 							<li class="fragment">Disponible partout</li>
 						</ul></li>
 						<li>Inconvénients<ul>
-							<li class="fragment">FIXME</li>
-							<li class="fragment">FIXME</li>
+							<li class="fragment">Uniquement sur les sites Wikimedia</li>
+							<li class="fragment">Difficilement automatisable</li>
+							<li class="fragment">JavaScript uniquement</li>
 						</ul></li>
 					</ul>
 					<p>
@@ -522,20 +488,20 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 				</section>
 				<section>
 					<h2>Pour résumer : hors du navigateur</h2>
-					<!-- TODO -->
 					<p>
-						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
+						<a href="images/crontab.jpg"><img src="images/crontab.jpg" style="height: 200px;"></a>
 						<br>
-						<small style="font-size: 40%">© FIXME, FIXME</small>
+						<small style="font-size: 40%"><del>©</del> Arkanosis, DP</small>
 					</p>
 					<ul>
 						<li>Avantages<ul>
-							<li class="fragment">FIXME</li>
-							<li class="fragment">FIXME</li>
+							<li class="fragment">Choix de la techno (Python, Java, shell…)</li>
+							<li class="fragment">Choix de la plate-forme (PC, mobile, Raspberry Pi)</li>
+							<li class="fragment">100 % automatisable</li>
 						</ul></li>
 						<li>Inconvénients<ul>
-							<li class="fragment">FIXME</li>
-							<li class="fragment">FIXME</li>
+							<li class="fragment">Gestion de l'authentification</li>
+							<li class="fragment">Besoin d'environnement approprié</li>
 						</ul></li>
 					</ul>
 					<p>
@@ -544,7 +510,6 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 				</section>
 				<section>
 					<h2>Troisième option : via un service tiers</h2>
-					<!-- TODO -->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -554,12 +519,14 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 						<li class="fragment">Typiquement avec OAuth2</li>
 						<div class="fragment">
 							<li>Avantages<ul>
-								<li class="fragment">FIXME</li>
-								<li class="fragment">FIXME</li>
+								<li class="fragment">Authentification partiellement gérée par MediaWiki</li>
+								<li class="fragment">Disponible partout</li>
+								<li class="fragment">Choix de la techno (Python, Ruby, Elixir…)</li>
+								<li class="fragment">100 % automatisable</li>
 							</ul></li>
 							<li>Inconvénients<ul>
-								<li class="fragment">FIXME</li>
-								<li class="fragment">FIXME</li>
+								<li class="fragment">Complexe à mettre en place</li>
+								<li class="fragment">Besoin d'un serveur</li>
 							</ul></li>
 						</div>
 					</ul>
@@ -569,7 +536,6 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 				</section>
 				<section>
 					<h2>== Voir aussi ==</h2>
-					<!-- TODO -->
 					<p>
 						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
 						<br>
@@ -631,22 +597,3 @@ $( function() { // TODO uniquement sur Spécial:Nouvelles_pages
 		</script>
 	</body>
 </html>
-
-
-<!--
-				<section>
-					<h2>FIXME</h2>
-					<!-- TODO ->
-					<p>
-						<a href="FIXME"><img src="images/FIXME" style="height: 300px;"></a>
-						<br>
-						<small style="font-size: 40%">© FIXME, FIXME</small>
-					</p>
-					<ul>
-						<li class="fragment">FIXME</li>
-					</ul>
-					<p>
-						<small style="font-size: 50%" class="caption">© <a href="https://fr.wikipedia.org/wiki/User:Arkanosis"><span style="color:gray">User:</span>Arkanosis</a> — CC-BY 4.0 — WikiConvention francophone 2019</small>
-					</p>
-				</section>
--->
